@@ -166,7 +166,10 @@ module.exports.run = async (bot, message, args) => {
 				parent: config.eventCategory,
 				permissionOverwrites: [{
 					id: config.rbRole,
-					deny: ['VIEW_CHANNEL', 'CONNECT', 'SPEAK']
+					deny: ['CONNECT']
+				}, {
+					id: config.nonverifiedUserRole,
+					deny: ['CONNECT']
 				}]
 			}).then( voice => {
 				let eventEmbed = new Discord.MessageEmbed()
