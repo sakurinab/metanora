@@ -893,10 +893,10 @@ bot.on('guildMemberAdd', async member => {
 			//сохранение записи
 			profile.save();
 		}
+		member.roles.add(config.nonverifiedUserRole);
 
 		//отправить сообщение в чат, при входе нового юзера
 		//NOTE: сделать отправку сообщения, только при нажатии на реакцию верификации
-		member.roles.add(config.nonverifiedUserRole);
 	} catch (err) {
 		if (err.name === "ReferenceError")
 			console.log("У вас ошибка")
