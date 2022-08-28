@@ -20,6 +20,8 @@
 //   \_/   \___/ (_) \_____/ (_) \____/                            
 //
 //
+
+process.on('unhandledRejection', (reason) => { console.log(reason) })
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
