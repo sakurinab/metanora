@@ -1411,4 +1411,4 @@ bot.on('voiceStateUpdate', async (oldState, newState) => {
 	}
 });
 
-bot.login('MTAxNTE0NzQ4MzQzNDg0NDIwMg.GOUBmM.wmUTmCehc0SHoQZjOpt17ixZsE5FHR1RfsbO7o');
+bot.login(token);
